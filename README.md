@@ -25,11 +25,9 @@ git --version
 #### MacOS
 For using GitHub on MacOS, you can go with either of the below two options viz. GitHub for Desktop or Git CLI.
 
-**Option 1:**  
-GitHub Desktop is an application software that contains the Git tool equipped with GUI for user interaction and enhancement. You can download the GitHub Desktop application for MacOS as an .dmg file installer format. For installing the GitHub Desktop application for MacOS, just click [here.](https://central.github.com/deployments/desktop/desktop/latest/darwin)
+**Option 1:** GitHub Desktop is an application software that contains the Git tool equipped with GUI for user interaction and enhancement. You can download the GitHub Desktop application for MacOS as an .dmg file installer format. For installing the GitHub Desktop application for MacOS, just click [here.](https://central.github.com/deployments/desktop/desktop/latest/darwin)
 
-**Option 2:**  
-Install GitHub as an CLI (Command Line Interface) tool if you wish to work using your Terminal. There are again two ways to install Git tool using command line tools.
+**Option 2:** Install GitHub as an CLI (Command Line Interface) tool if you wish to work using your Terminal. There are again two ways to install Git tool using command line tools.
 
 1. Open Xcode Command Line Tools and paste the below command. It will open up a prompt asking you whether to install it or not.
 ```sh
@@ -44,11 +42,9 @@ brew install git
 #### Windows
 On Windows, you can use GitHub Desktop or the Git CLI tool as an .exe file installer for accessing your GitHub account. Follow the below options to download GitHub on device.
 
-**Option 1:**  
-Download the GitHub Desktop application for Windows to use Git tool commands with GUI for an interactive experience with GitHub's Git package. For downloading the GitHub Desktop for Windows click [here.](https://central.github.com/deployments/desktop/desktop/latest/win32)
+**Option 1:** Download the GitHub Desktop application for Windows to use Git tool commands with GUI for an interactive experience with GitHub's Git package. For downloading the GitHub Desktop for Windows click [here.](https://central.github.com/deployments/desktop/desktop/latest/win32)
 
-**Option 2:**  
-Use GitHub's Git package as an CLI tool if you prefer to stay with Command Prompt based operations. Just click [here](https://github.com/git-for-windows/git/releases/download/v2.50.1.windows.1/Git-2.50.1-64-bit.exe) to install the Git tool on your Windows device.
+**Option 2:** Use GitHub's Git package as an CLI tool if you prefer to stay with Command Prompt based operations. Just click [here](https://github.com/git-for-windows/git/releases/download/v2.50.1.windows.1/Git-2.50.1-64-bit.exe) to install the Git tool on your Windows device.
 
 #### Common for all OS
 For configuring the Git CLI tool with your GitHub Account on your local machine, just follow the below steps:
@@ -122,4 +118,11 @@ That's all about the installation part of our project. See below on how to run t
 To run the project successfully on your device, check the Installation Guide if whether you have installed all the requirements correctly. Then copy-paste the below command on your terminal and execute it to start running the project as a localhost on the device. Follow the mentioned steps on the terminal, to open the project on your favourite web browser.
 ```sh
 npm run dev
+```
+  
+**Or**  
+  
+Use the below command to host it on your local network so that other devices in the network can access the running project using their web browsers.  
+```sh
+npm run dev -- --host
 ```
