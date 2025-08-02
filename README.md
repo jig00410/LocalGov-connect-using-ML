@@ -73,7 +73,7 @@ ssh -T git@github.com
 
 **Note:** For GitHub Desktop users, you don't need any kind of above configurations.
  
-### Installation (Coming Soon...)
+### Installation (Early Stage)
 Before starting to work on the **LocalGov Connect using ML** project, you need to clone this GitHub repository as recommended below. Also, make sure you have pre-installed Node.js on your local machine.
 
 Just follow the below listed steps to install and configure the project on your device:
