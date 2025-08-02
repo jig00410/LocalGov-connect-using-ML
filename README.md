@@ -81,31 +81,37 @@ ssh -T git@github.com
 Before starting to work on the **LocalGov Connect using ML** project, you need to clone this GitHub repository as recommended below. Also, make sure you have pre-installed Node.js on your local machine.
 
 Just follow the below listed steps to install and configure the project on your device:
-1. Clone the GitHub Repository.  
-**For GitHub Desktop Users**  
+1. **Clone the GitHub Repository –**  
+  
+**For GitHub Desktop Users:**  
 Copy the below link and go to **GitHub Desktop -> File -> Clone Repository -> URL Tab (textbox)**. Paste the copied URL and choose a local path on your device where the repo. should be saved.  
-
+  
 ```sh
 https://github.com/A25Coder/LocalGov-connect-using-ML.git
 ```
-**For Git CLI Tool Users**  
-Run the below command in your terminal if you prefer cloning the repo. using web URL i.e. over the HTTPS.
+  
+**For Git CLI Tool Users:**  
+Run the below command in your terminal if you prefer cloning the repo. using web URL i.e. over the HTTPS.  
 ```sh
 git clone https://github.com/A25Coder/LocalGov-connect-using-ML.git
 ```
-**OR ELSE**  
-Copy-paste and run the below command if you have already setup your SSH key using `ssh-keygen` command as instructed above in the Prerequisites guide.
+  
+**Or**  
+  
+Copy-paste and run the below command if you have already setup your SSH key using `ssh-keygen` command as instructed above in the Prerequisites guide.  
 ```sh
 git clone git@github.com:A25Coder/LocalGov-connect-using-ML.git
 ```
 
-2. Next step is to change you current working directory to the project directory using the `cd` command as shown below:
+2. **Change current working directory –**  
+Next step is to change you current working directory to the project directory using the `cd` command as shown below:
 ```sh
 cd LocalGov-connect-using-ML
 cd front-end
 ```
 
-3. Then use the `npm` command as below to install the required packages for running the project. Copy and paste the below command as shown.
+3. **Install the required packages –**  
+Then use the `npm` command as below to install the required packages for running the project. Copy and paste the below command as shown.
 ```sh
 npm install
 ```
