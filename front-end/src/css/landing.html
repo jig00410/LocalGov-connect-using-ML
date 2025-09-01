@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalGov Connect - Your Voice for a Better City</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #111827;
+        }
+        .hero-section {
+            background: linear-gradient(45deg, #eff6ff, #e0e7ff);
+        }
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .live-feed-item {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="w-full">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <svg class="text-blue-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <h1 class="ml-3 text-2xl font-bold text-gray-800">LocalGov Connect</h1>
+            </div>
+            <div>
+                <a href="index.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300">
+                    Get Started
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero-section pt-20 pb-28">
+            <div class="container mx-auto text-center px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-left">
+                    <h2 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">See an issue? Report it in seconds.</h2>
+                    <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-xl">Join thousands of citizens making our city better. Report potholes, garbage, and broken streetlights directly to the authorities who can fix them.</p>
+                    <a href="index.html" class="mt-8 inline-block bg-gray-900 hover:bg-gray-700 text-white font-bold py-4 px-10 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+                        File Your First Report
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                     <img src="https://placehold.co/600x400/e0e7ff/374151?text=Citizens+Making+a+Difference" alt="Community illustration" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                     <h3 class="text-3xl font-bold text-gray-900">A Simple, Powerful Platform for Change</h3>
+                     <p class="text-gray-500 mt-2">Change is just three steps away.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="feature-card bg-gray-50 p-8 rounded-xl text-center border">
+                        <div class="bg-blue-100 rounded-full h-16 w-16 flex items-center justify-center mx-auto">
+                           <i data-feather="camera" class="h-8 w-8 text-blue-600"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mt-5">1. Snap & Send</h4>
+                        <p class="text-gray-600 mt-2">Quickly capture a photo of a civic issue and submit it with a location pin.</p>
+                    </div>
+                     <div class="feature-card bg-gray-50 p-8 rounded-xl text-center border">
+                        <div class="bg-green-100 rounded-full h-16 w-16 flex items-center justify-center mx-auto">
+                           <i data-feather="send" class="h-8 w-8 text-green-600"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mt-5">2. Route to Authorities</h4>
+                        <p class="text-gray-600 mt-2">Your report is automatically sent to the correct government department.</p>
+                    </div>
+                     <div class="feature-card bg-gray-50 p-8 rounded-xl text-center border">
+                        <div class="bg-purple-100 rounded-full h-16 w-16 flex items-center justify-center mx-auto">
+                           <i data-feather="trending-up" class="h-8 w-8 text-purple-600"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mt-5">3. Track Resolution</h4>
+                        <p class="text-gray-600 mt-2">Receive real-time updates and see the progress of your report until it's resolved.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Feed Section -->
+        <section class="bg-gray-50 py-20">
+             <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                     <h3 class="text-3xl font-bold text-gray-900">Live Community Impact</h3>
+                     <p class="text-gray-500 mt-2">See issues being resolved across the city right now.</p>
+                </div>
+                <div class="max-w-2xl mx-auto">
+                    <div id="live-feed" class="space-y-4">
+                        <!-- Feed items will be injected here by JavaScript -->
+                    </div>
+                </div>
+             </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-center py-8">
+        <p class="text-gray-300">&copy; 2025 LocalGov Connect. All rights reserved.</p>
+    </footer>
+
+    <script>
+        feather.replace();
+        
+        // Live Feed Simulation
+        const feedContainer = document.getElementById('live-feed');
+        const issues = [
+            { icon: 'check-circle', color: 'text-green-500', text: 'Pothole on Main Street marked as resolved.', area: 'Vasant Nagar' },
+            { icon: 'trash-2', color: 'text-blue-500', text: 'Waste collection requested for Park Avenue.', area: 'Ashok Vihar' },
+            { icon: 'zap', color: 'text-green-500', text: 'Streetlight repair completed in Sector 12.', area: 'Gandhi Chowk' },
+            { icon: 'droplet', color: 'text-blue-500', text: 'New report of a water leak on Station Road.', area: 'Shivaji Nagar' }
+        ];
+        let issueIndex = 0;
+
+        function addFeedItem() {
+            if (feedContainer.children.length >= 4) {
+                feedContainer.removeChild(feedContainer.firstChild);
+            }
+
+            const issue = issues[issueIndex % issues.length];
+            const item = document.createElement('div');
+            item.className = 'live-feed-item bg-white p-4 rounded-lg shadow-md flex items-center space-x-4 border';
+            item.style.opacity = '0'; // Start invisible for animation
+            item.innerHTML = `
+                <div class="flex-shrink-0"><i data-feather="${issue.icon}" class="h-6 w-6 ${issue.color}"></i></div>
+                <div class="flex-1 min-w-0">
+                    <p class="text-sm font-medium text-gray-900 truncate">${issue.text}</p>
+                    <p class="text-sm text-gray-500">${issue.area}</p>
+                </div>
+                <div class="inline-flex items-center text-xs text-gray-400">
+                    ${Math.floor(Math.random() * 59) + 1}s ago
+                </div>
+            `;
+            feedContainer.appendChild(item);
+            feather.replace();
+            issueIndex++;
+        }
+        
+        setInterval(addFeedItem, 3000);
+        addFeedItem(); // Initial items
+        setTimeout(addFeedItem, 1000);
+    </script>
+</body>
+</html>
+

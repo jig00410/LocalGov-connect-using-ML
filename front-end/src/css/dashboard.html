@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - LocalGov Connect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .status-tag {
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+        .status-tag.resolved { background-color: #dcfce7; color: #166534; }
+        .status-tag.in-progress { background-color: #dbeafe; color: #1e40af; }
+        .status-tag.submitted { background-color: #fef9c3; color: #854d0e; }
+        .category-card { transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; }
+        .category-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); border-color: #3b82f6; }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gray-800 text-white flex flex-col fixed h-full">
+            <div class="p-6 flex items-center border-b border-gray-700 h-16">
+                <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <h1 class="ml-3 text-xl font-bold">LocalGov Connect</h1>
+            </div>
+            <nav class="flex-1 p-4">
+                <a href="#" class="flex items-center px-4 py-3 bg-gray-900 rounded-lg text-white font-semibold">
+                    <i data-feather="home" class="w-5 h-5 mr-3"></i> Dashboard
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 mt-2 text-gray-300 hover:bg-gray-700 rounded-lg">
+                    <i data-feather="file-plus" class="w-5 h-5 mr-3"></i> Report New Issue
+                </a>
+                <a href="#" class="flex items-center px-4 py-3 mt-2 text-gray-300 hover:bg-gray-700 rounded-lg">
+                    <i data-feather="inbox" class="w-5 h-5 mr-3"></i> My Reports
+                </a>
+                 <a href="#" class="flex items-center px-4 py-3 mt-2 text-gray-300 hover:bg-gray-700 rounded-lg">
+                    <i data-feather="bar-chart-2" class="w-5 h-5 mr-3"></i> Community Stats
+                </a>
+            </nav>
+            <div class="p-4 border-t border-gray-700">
+                 <a href="index.html" class="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700 rounded-lg">
+                    <i data-feather="log-out" class="w-5 h-5 mr-3"></i> Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 ml-64 p-8 overflow-y-auto">
+            <header class="flex justify-between items-center mb-10">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800">Dashboard</h2>
+                    <p class="text-gray-500 mt-1">Welcome back! Let's make a difference today.</p>
+                </div>
+                <div class="flex items-center space-x-4">
+                     <button class="p-2 rounded-full hover:bg-gray-200"><i data-feather="bell" class="text-gray-600"></i></button>
+                     <img src="https://placehold.co/40x40/dbeafe/1e40af?text=U" alt="User avatar" class="rounded-full">
+                </div>
+            </header>
+
+            <!-- Quick Actions -->
+            <section>
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">Report a New Issue</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="category-card bg-white p-6 rounded-lg shadow-sm text-center cursor-pointer border-2 border-transparent">
+                        <i data-feather="alert-octagon" class="h-10 w-10 mx-auto text-orange-500"></i>
+                        <h4 class="mt-4 font-semibold text-gray-800">Roads & Potholes</h4>
+                    </div>
+                    <div class="category-card bg-white p-6 rounded-lg shadow-sm text-center cursor-pointer border-2 border-transparent">
+                        <i data-feather="trash-2" class="h-10 w-10 mx-auto text-green-500"></i>
+                        <h4 class="mt-4 font-semibold text-gray-800">Waste Management</h4>
+                    </div>
+                    <div class="category-card bg-white p-6 rounded-lg shadow-sm text-center cursor-pointer border-2 border-transparent">
+                        <i data-feather="droplet" class="h-10 w-10 mx-auto text-blue-500"></i>
+                        <h4 class="mt-4 font-semibold text-gray-800">Water & Sewage</h4>
+                    </div>
+                    <div class="category-card bg-white p-6 rounded-lg shadow-sm text-center cursor-pointer border-2 border-transparent">
+                        <i data-feather="zap" class="h-10 w-10 mx-auto text-yellow-500"></i>
+                        <h4 class="mt-4 font-semibold text-gray-800">Electricity & Lights</h4>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Reports & Map -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10">
+                <div class="lg:col-span-2">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-4">Your Recent Reports</h3>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <table class="w-full">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="text-left py-3 px-6 font-semibold text-gray-600 uppercase text-xs">Report ID</th>
+                                    <th class="text-left py-3 px-6 font-semibold text-gray-600 uppercase text-xs">Issue</th>
+                                    <th class="text-left py-3 px-6 font-semibold text-gray-600 uppercase text-xs">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                 <tr>
+                                    <td class="py-4 px-6 text-gray-600 font-mono text-sm">#81245</td>
+                                    <td class="py-4 px-6 text-gray-800 font-medium">Pothole near Central Park</td>
+                                    <td class="py-4 px-6"><div class="status-tag resolved">Resolved</div></td>
+                                </tr>
+                                 <tr>
+                                    <td class="py-4 px-6 text-gray-600 font-mono text-sm">#81239</td>
+                                    <td class="py-4 px-6 text-gray-800 font-medium">Garbage overflow on MG Road</td>
+                                    <td class="py-4 px-6"><div class="status-tag in-progress">In Progress</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4 px-6 text-gray-600 font-mono text-sm">#81211</td>
+                                    <td class="py-4 px-6 text-gray-800 font-medium">Leaking water pipe in Sector 5</td>
+                                    <td class="py-4 px-6"><div class="status-tag submitted">Submitted</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                     <h3 class="text-xl font-semibold text-gray-700 mb-4">Local Issues Map</h3>
+                     <div class="bg-white rounded-lg shadow-sm overflow-hidden h-80">
+                         <img src="https://placehold.co/600x400/e5e7eb/4b5563?text=Map+of+Your+Area" class="w-full h-full object-cover" alt="Map of local issues">
+                     </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
+
