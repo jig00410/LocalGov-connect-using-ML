@@ -273,6 +273,12 @@
                     signinButton.classList.add('bg-green-600');
                     signinSpinner.classList.add('hidden');
                     signinButtonText.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="mx-auto"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+                    
+                    // **REDIRECT TO DASHBOARD**
+                    setTimeout(() => {
+                        window.location.href = './dashboard.html';
+                    }, 1000);
+
                 }, 2000);
             });
 
@@ -358,3 +364,4 @@
 
 </body>
 </html>
+
